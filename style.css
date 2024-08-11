@@ -1,19 +1,22 @@
+/*1. When zoom in or out the items run away ,the hero parts run to the left
+2.the quote part,text and quote are not align on the right edge
+3.the body is a column box,when adds align items:center to it, some flex-items which have less content(e.g. bottom and footer) will have more space on the horizontal line */
 body{
     font-family: Roboto, sans-serif;/* there is no Roboto */
     display: flex;
+    flex:auto;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    gap: 60px;
 }
 
 .hero
-,footer{
+,.footer{
     background-color: #1F2937;
 }
 
 .hero{
     display: flex;
-    flex-direction: column;
     padding:20px 60px 60px 60px;
     gap:60px;
 }
@@ -39,11 +42,14 @@ body{
 
 .h1{
     display: flex;
+    flex-direction: column;
     gap:70px;
-    justify-content: space-around;
+   
 }
 .h2{
     display: flex;
+    flex-direction: column;
+    gap: 70px;
 }
 .main,
 .secondary{
@@ -72,8 +78,10 @@ img{
 .content1{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    gap:60px;
+    padding:60px;
 }
 .container{
 
@@ -82,4 +90,51 @@ img{
 }
 .info{
     max-width:150px;
+}
+.content2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #E5E7EB;
+    box-sizing: content-box;
+    flex-shrink:0;
+}
+.quote-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+}
+p{
+    font-size: 36px;
+    font-style: italic;
+    color: #1F2937;  
+}
+.quote{
+    align-self: flex-end;
+    
+}
+.bottom{
+    background-color: #3882F6;
+    color: #F9FAF8;
+    display: flex;
+    box-sizing: content-box;
+    justify-content: space-around;
+    padding:60px;
+    margin-left: 60px;
+    margin-right: 60px;
+
+}
+.bigger{
+    font-size: 24px;
+    font-weight: bold; /* not mentioned */
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F9FAF8;
+    padding:60px;
+    
 }
